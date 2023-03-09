@@ -1,12 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 .header {
   background-color: #f1f1f1;
   padding: 30px;
   text-align: center;
 }
 
+
 #navbar {
+  margin:       0;
+  padding:      0;
   overflow: hidden;
   background-color: #f1f1f1;
+  z-index: 1;
 }
 
 /* Style the navbar links */
@@ -19,6 +28,7 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
+  border-bottom: 3px solid transparent;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */
@@ -28,14 +38,16 @@
 }
 
 /* Change the background color on mouse-over */
-#navbar a:hover {
+#navbar a:hover, .dropdown:hover .dropbtn{
   background-color: #ddd;
   color: black;
+  transition: 0.3s;
+  border-bottom: 3px solid #00561B;
 }
 
 /* Style the active/current link*/
 #navbar a.active {
-  background-color: dodgerblue;
+  background-color: #00CCCB;
   color: white;
 }
 
@@ -44,17 +56,117 @@
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .navbar-right {
-    float: none;
-  }
+#navbar a.split {
+  float: right;
 }
+
+/*----------------------------------------------------------------------------------------------------*/
+.dropdown {
+  float: left;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 12px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  transition: 0.3s;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+#box {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 210px);
+  justify-content:center;
+}
+
+.tile {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: transparent;
+  perspective: 1000px;
+  border-radius: 4px;
+}
+
+.tile-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 4px;
+}
+
+.tile:hover .tile-inner {
+  transform: rotateY(180deg);
+}
+
+.tile-front, .tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.tile-front {
+  background-color: #00CCCB;
+  color: black;
+}
+.tile-back {
+  background-color: #01CDCC;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
 
 .content {
   padding: 16px;
