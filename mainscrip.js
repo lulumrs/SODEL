@@ -7,7 +7,7 @@ var sticky = navbar.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
     navbar.style.overflow = "visible";
   } else {
     navbar.classList.remove("sticky");
@@ -15,6 +15,46 @@ function myFunction() {
 
   }
 }
+
+
+var data = {
+  "Cards":[{
+      "Title":"Card 1 title",
+      "Content1":"Here is the front",
+      "Content2":"Here is the back",
+    },
+
+    {
+      "Title":"Card 2 title",
+      "Content1":"Here is the front",
+      "Content2":"Here is the back",
+    },
+
+    {
+      "Title":"Card 3 title",
+      "Content1":"Here is the front",
+      "Content2":"Here is the back",
+    },
+
+    {
+      "Title":"Card 4 title",
+      "Content1":"Here is the front",
+      "Content2":"Here is the back",
+    },
+
+    {
+      "Title":"Card 5 title",
+      "Content1":"Here is the front",
+      "Content2":"Here is the back",
+    }]};
+
+data.Cards.forEach(function(card) {
+  console.log(card.Title);
+  console.log(card.Content1);
+  var block = '<div class="tile"><div class="tile-inner"><div class="tile-front"><h3>'+card.Title+'</h3><p>'+card.Content1+'</p></div><div class="tile-back"><p>'+card.Content2+'</p></div></div></div>';
+  document.getElementById('box').innerHTML += block;
+});
+
 
 
 function addTile(){
