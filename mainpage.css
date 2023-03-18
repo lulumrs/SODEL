@@ -157,12 +157,33 @@ html {
 .tile-front {
   background-color: #00CCCB;
   color: black;
+  border-radius: 4px;
 }
 .tile-back {
   background-color: #01CDCC;
   color: black;
   transform: rotateY(180deg);
+  border-radius: 4px;
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+#topButton {
+  background-color: #00CCCB;
+  z-index: 1;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  font-size: 35px;
+  bottom: 0;
+  right: 0;
+  border-radius: 20px;
+  text-align: center;
+  visibility: hidden;
+}
+
 
 
 /*----------------------------------------------------------------------------------------------------*/
