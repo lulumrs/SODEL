@@ -115,59 +115,6 @@ html {
 
 
 /*----------------------------------------------------------------------------------------------------*/
-#box {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, 210px);
-  justify-content:center;
-}
-
-.tile {
-  width: 200px;
-  height: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  background-color: transparent;
-  perspective: 1000px;
-  border-radius: 4px;
-}
-
-.tile-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  border-radius: 4px;
-}
-
-.tile:hover .tile-inner {
-  transform: rotateY(180deg);
-}
-
-.tile-front, .tile-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-.tile-front {
-  background-color: #00CCCB;
-  color: black;
-  border-radius: 4px;
-}
-.tile-back {
-  background-color: #01CDCC;
-  color: black;
-  transform: rotateY(180deg);
-  border-radius: 4px;
-}
-
-
-/*----------------------------------------------------------------------------------------------------*/
 
 #topButton {
   background-color: #00CCCB;
@@ -187,6 +134,46 @@ html {
 
 
 /*----------------------------------------------------------------------------------------------------*/
+#firstlook {
+  width: 100 svh;
+  border: 3px solid navy;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.imgbox {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.img {
+  border-radius: 10px;
+}
+.switch {
+  width: 60px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: auto;
+}
+.textpres {
+  width: 100%;
+  min-width: 300px;
+  padding-left: 10px;
+  margin: auto;
+}
+/*----------------------------------------------------------------------------------------------------*/
+
+.paragimg {
+  padding-left: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
 footer {
     display: flex;
     justify-content: center;
@@ -194,6 +181,14 @@ footer {
     background-color: #45a1ff;
 }
 /*----------------------------------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  #firstlook {
+    flex-direction: column;
+  }
+  .paragimg {
+    flex-direction: column;
+  }
+}
 
 .content {
   padding: 16px;
