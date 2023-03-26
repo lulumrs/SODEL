@@ -22,8 +22,8 @@ function myFunction() {
 
 
 
-// here is the code for the background
 
+// here is the code for the background
 // Sélectionner le canvas
 const canvas = document.getElementById("canvas");
 

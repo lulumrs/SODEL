@@ -6,7 +6,7 @@
 	<meta name="description" content="Service and Offers on Demands on line">
 	<meta name="keywords" content="Services, Offre, Demande">
 	<meta name="author" content="Marais Lucas">
-	<link rel="stylesheet" href="mainpage.css">
+	<link rel="stylesheet" href="newpost.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -20,7 +20,7 @@
 
 
 <div id="navbar">
-  <a class="active" href="mainpage.html">Home</a>
+  <a class="active" href="../mainpage.html">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Categories
       <i class="fa fa-caret-down"></i>
@@ -31,49 +31,42 @@
       <a href="#adress">Demandes</a>
     </div>
   </div>
-  <a href="./newpost/newpost.html">Poster une annonce</a>
+  <a href="newpost.html">Poster une annonce</a>
   <a class="split" href="javascript:void(0)">Help</a>
   <a class="split" href="javascript:void(0)">History</a>
 </div>
 
 
-
-<input type="button" onclick="addTile()" value="Add new tile"> 
-
-
-<div id="box">
-	<a href="./annonces/presentation.html">
-	<div class="tile">
-		<div class="tile-inner">
-			<div class="tile-front">
-				<h3>Card 1</h3>
-		     <p>Some text</p>
-		     <p>Some text</p>
-			</div>
-			<div class="tile-back">
-				<h3>Card 1 back</h3>
-		     <p>Some new text</p>
-		     <p>Some new text</p>
-			</div>
-		</div>
-	</div>
-	</a>
+<form action="/newpost.php" method="post">
+<div id="firstpage">
+  <div id="addphoto">
+    <div class="drop">
+      <h2>Faites glisser des fichiers ou cliquez pour ouvrir un explorateur pourquoi ça marche pas ?</h2>
+    </div>
+    <div class="description">
+      <label for="title">Ajoutez un titre a votre présentation :</label>
+      <input type="text" name="title">
+    </div>
+  </div>
 </div>
+
+</form>
+
 
 
 <div id="topButton">
-	<a href="#top">
-		<span class="material-symbols-outlined">
-		arrow_upward
-		</span>
-	</a>
+  <a href="#top">
+    <span class="material-symbols-outlined">
+    arrow_upward
+    </span>
+  </a>
 </div>
 
 
 
 <footer>
-	<p id="adress">lucas.marais@ecam.fr</p>
+  <p id="adress">lucas.marais@ecam.fr</p>
 </footer>
-<script src="mainscrip.js"></script> 
+<script src="newpost.js"></script> 
 </body>
 </html>
