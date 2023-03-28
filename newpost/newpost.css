@@ -16,10 +16,9 @@ canvas {
 
 
 .header {
-  background-color: #f1f1ff;
-  padding: 40px;
+  background-color: #f1f1f1;
+  padding: 30px;
   text-align: center;
-  color: white;
 }
 
 
@@ -130,16 +129,106 @@ canvas {
 /*----------------------------------------------------------------------------------------------------*/
 
 form {
-  position: relative;
-
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
-  color: white;
-  background: #FFF
+  width  : svw;
+  min-width: 600px;
+  min-height: 200px;
+  margin : 10px;
+  border: 3px solid #57C5B6;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-.drop{
-  background-color: black;
+#firstpage{
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+}
+#addphoto{
+  display: flex;
+  flex-direction: row;
+  min-width: 200px;
+  width: 40%;
+}
+.stackedimg{
+  width: 30%;
+}
+
+
+
+
+
+
+.upload-btn-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.btn {
+  border: 2px solid #000;
+  color: #ccc;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: #666;
+  color: #666;
+}
+
+input[type="file"].button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload-btn-wrapper:hover .btn{
+  border-color: #666;
+  color: #666;
+}
+
+
+
+
+
+.description{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+}
+
+
+.descriptionblock{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+input[type="text"].carddesc{
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(10, 10, 10, 0.5);
+  color: white;
+  line-break: strict;
+  vertical-align: text-top;
+}
+input[type="text"].titre{
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid #ddd;
+  color: white;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -165,7 +254,7 @@ form {
 footer {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #45a1ff;
 }
 /*----------------------------------------------------------------------------------------------------*/

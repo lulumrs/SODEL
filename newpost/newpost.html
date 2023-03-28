@@ -40,12 +40,20 @@
 <form action="/newpost.php" method="post">
 <div id="firstpage">
   <div id="addphoto">
-    <div class="drop">
-      <h2>Faites glisser des fichiers ou cliquez pour ouvrir un explorateur pourquoi ça marche pas ?</h2>
+    <div class="stackedimg"></div>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Sélectionner une image</button>
+      <input class="button" type="file" name="image" accept="image/*" />
     </div>
-    <div class="description">
-      <label for="title">Ajoutez un titre a votre présentation :</label>
-      <input type="text" name="title">
+  </div>
+  <div class="description">
+    <div class="titleblock">
+    <label for="title">Ajoutez un titre a votre présentation : </label>
+    <input type="text" name="title" class="titre">
+    </div>
+    <div class="descriptionblock">
+    <label for="desc">Ajoutez une description votre présentation : </label>
+    <input type="text" name="desc" class="carddesc">
     </div>
   </div>
 </div>
