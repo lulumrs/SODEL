@@ -22,6 +22,15 @@ function myFunction() {
 
 
 
+var previewPicture  = function (e) {
+
+        // e.files contient un objet FileList
+        const [picture] = e.files
+        console.log(e.files)
+}
+
+
+
 
 // here is the code for the background
 // Sélectionner le canvas

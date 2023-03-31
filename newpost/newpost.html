@@ -43,7 +43,7 @@
     <div class="stackedimg"></div>
     <div class="upload-btn-wrapper">
       <button class="btn">Sélectionner une image</button>
-      <input class="button" type="file" name="image" accept="image/*" />
+      <input class="button" type="file" name="image" accept="image/*" / onchange="previewPicture(this)" required multiple>
     </div>
   </div>
   <div class="description">
@@ -53,7 +53,7 @@
     </div>
     <div class="descriptionblock">
     <label for="desc">Ajoutez une description votre présentation : </label>
-    <input type="text" name="desc" class="carddesc">
+    <textarea class="carddesc" name="subject" placeholder="Write your description"></textarea>
     </div>
   </div>
 </div>
