@@ -239,23 +239,20 @@ input[type="text"].titre{
 
 
 #ButtonBox {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-color: white;
 }
 .addBlock {
   grid-area: 1 / 1 / 2 / 3;
   justify-content: center;
   height: 1/10%;
-  border: 2px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  background-color: black;
 }
 .cancelBlock {
   grid-area: 2 / 1 / 3 / 2;
@@ -264,7 +261,7 @@ input[type="text"].titre{
   grid-area: 2 / 2 / 3 / 3;
 }
 button.buttonPlus{
-  background-color: navy;
+  background-color: #00CCCB;
   height: 50px;
   width: 50px;
   color: white;
@@ -277,7 +274,7 @@ button.buttonPlus{
 
 button.buttonPlus:hover #plus{
   transform: rotate(90deg) scale(0.2);
-  transition: transform 1s ease;
+  transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1.2);
 }
 
 
